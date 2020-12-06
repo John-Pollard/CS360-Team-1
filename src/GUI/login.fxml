@@ -8,11 +8,13 @@
    <children>
       <TextField fx:id="usernameField" layoutX="359.0" layoutY="275.0" prefHeight="27.0" prefWidth="195.0" />
       <TextField fx:id="passwordField" layoutX="359.0" layoutY="313.0" prefHeight="27.0" prefWidth="195.0" />
-      <Button layoutX="404.0" layoutY="365.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="92.0" text="Sign In" />
+      <Button fx:id="signButton" layoutX="404.0" layoutY="365.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="92.0" text="Sign In" />
       <Label layoutX="387.0" layoutY="190.0" prefHeight="61.0" prefWidth="186.0" text="Login" textAlignment="JUSTIFY" wrapText="true">
          <font>
             <Font size="39.0" />
          </font>
       </Label>
+      <Button layoutX="151.0" layoutY="207.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>
+

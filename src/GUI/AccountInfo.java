@@ -16,7 +16,7 @@ public class AccountInfo implements Initializable {
     private ListView<String> listView;
 
 
-
+    @Override
     public void initialize(URL url, ResourceBundle rb){
 
         loadData();

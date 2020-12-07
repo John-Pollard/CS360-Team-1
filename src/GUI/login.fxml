@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.login">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.login">
    <children>
       <TextField fx:id="usernameField" layoutX="359.0" layoutY="275.0" prefHeight="27.0" prefWidth="195.0" />
       <TextField fx:id="passwordField" layoutX="359.0" layoutY="313.0" prefHeight="27.0" prefWidth="195.0" />
@@ -14,7 +14,5 @@
             <Font size="39.0" />
          </font>
       </Label>
-      <Button layoutX="151.0" layoutY="207.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>
-

@@ -1,7 +1,10 @@
-.button-signup{
+.button{
     -fx-background-radius: 0;
     -fx-background-color: lightblue;
     -fx-border-color: black;
+}
+.button:armed{
+    -fx-background-color: white;
 }
 .text-field{
     -fx-border-color: black;

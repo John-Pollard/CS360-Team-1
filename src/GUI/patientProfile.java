@@ -1,6 +1,8 @@
 package GUI;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -8,11 +10,17 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Menu;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class patientProfile implements Initializable {
+
+    @FXML
+    private Pane pane;
+
     @FXML
     private TextField lastnamefield;
 
@@ -47,7 +55,7 @@ public class patientProfile implements Initializable {
     private TextArea notesFIeld;
 
     @FXML
-    private ChoiceBox<?> sexBox;
+    private ChoiceBox<String> sexBox;
 
     @FXML
     private TextField workField;
@@ -70,11 +78,6 @@ public class patientProfile implements Initializable {
     @FXML
     private TextField emworkField;
 
-    @FXML
-    private Menu fileMenu;
-
-    @FXML
-    private Menu editMenu;
 
     @FXML
     private DatePicker firstvisitDate;
@@ -94,8 +97,26 @@ public class patientProfile implements Initializable {
     @FXML
     private Button prescriptionButton;
 
-    @Override
+    @FXML
+    void handledeleteEvent(ActionEvent event) throws IOException {
 
+
+        //After deleting the patient it goes back to the homepage
+            Pane homepage =  FXMLLoader.load(getClass().getResource("homepage.fxml"));
+        pane.getChildren().setAll(homepage);
+    }
+
+    @FXML
+    void handlesaveEvent(ActionEvent event) {
+
+    }
+
+    @FXML
+    void handlewriteEvent(ActionEvent event) {
+
+    }
+
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 

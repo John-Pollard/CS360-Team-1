@@ -20,12 +20,14 @@ public class PrescriptionInfo implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+
+
     }
 
 
     @FXML
     void handlePrescriptionEvent(ActionEvent event) {
-
+        System.out.println("pog");
     }
 
 }

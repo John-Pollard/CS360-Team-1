@@ -12,10 +12,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.patientProfile">
    <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="961.0" style="-fx-background-color: white;" stylesheets="@patientprofilecss.css">
+      <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="961.0" style="-fx-background-color: white;" stylesheets="@patientprofilecss.css">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1ffffb00" height="187.0" layoutX="552.0" layoutY="218.0" stroke="#00000043" strokeType="INSIDE" styleClass="patientprofile2" width="286.0" />
             <TextField fx:id="lastnamefield" layoutX="194.0" layoutY="120.0" />
@@ -70,9 +69,9 @@
             <ChoiceBox layoutX="194.0" layoutY="436.0" prefWidth="150.0" />
             <Label layoutX="348.0" layoutY="440.0" text="Room #:" />
             <TextField fx:id="roomField" layoutX="401.0" layoutY="438.0" prefHeight="27.0" prefWidth="149.0" />
-            <Button fx:id="deleteButton" layoutX="781.0" layoutY="81.0" mnemonicParsing="false" text="Delete" />
-            <Button fx:id="saveButton" layoutX="677.0" layoutY="82.0" mnemonicParsing="false" text="Save Changes" />
-            <Button fx:id="prescriptionButton" layoutX="548.0" layoutY="82.0" mnemonicParsing="false" text="Write Prescription" />
+            <Button fx:id="deleteButton" layoutX="781.0" layoutY="81.0" mnemonicParsing="false" onAction="#handledeleteEvent" text="Delete" />
+            <Button fx:id="saveButton" layoutX="677.0" layoutY="82.0" mnemonicParsing="false" onAction="#handlesaveEvent" text="Save Changes" />
+            <Button fx:id="prescriptionButton" layoutX="548.0" layoutY="82.0" mnemonicParsing="false" onAction="#handlewriteEvent" text="Write Prescription" />
          </children>
       </Pane>
    </children>

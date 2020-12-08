@@ -24,32 +24,38 @@ public class homepage  implements Initializable {
     void handlePatientListEvent(ActionEvent event) throws IOException {
 
 
-                FXMLLoader loader = FXMLLoader.load(getClass().getResource("patientProfile.fxml"));
+        AnchorPane pane=  FXMLLoader.load(getClass().getResource("patientProfile.fxml"));
 
-               anchorPane = loader.load();
-
-
+        anchorPane.getChildren().setAll(pane);
 
     }
 
     @FXML
-    void handleAccountEvent(ActionEvent event) {
+    void handleAccountEvent(ActionEvent event) throws IOException {
+        AnchorPane pane=  FXMLLoader.load(getClass().getResource("AccountInfo.fxml"));
 
+        anchorPane.getChildren().setAll(pane);
     }
 
     @FXML
-    void handleApptEvent(ActionEvent event) {
+    void handleApptEvent(ActionEvent event) throws IOException {
+        AnchorPane pane=  FXMLLoader.load(getClass().getResource("Appointment.fxml"));
 
+        anchorPane.getChildren().setAll(pane);
     }
 
     @FXML
-    void handleNewPatientEvent(ActionEvent event) {
+    void handleNewPatientEvent(ActionEvent event) throws IOException {
+        AnchorPane pane=  FXMLLoader.load(getClass().getResource("patientProfile.fxml"));
 
+        anchorPane.getChildren().setAll(pane);
     }
 
     @FXML
-    void handlePrescriptionsEvent(ActionEvent event) {
+    void handlePrescriptionsEvent(ActionEvent event) throws IOException {
+        AnchorPane pane=  FXMLLoader.load(getClass().getResource("prescriptionInfo.fxml"));
 
+        anchorPane.getChildren().setAll(pane);
     }
 
     @Override

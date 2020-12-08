@@ -28,6 +28,8 @@ public class homepage  implements Initializable {
 
         anchorPane.getChildren().setAll(pane);
 
+
+
     }
 
     @FXML

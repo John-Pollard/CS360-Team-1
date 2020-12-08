@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 import javax.swing.*;
 import java.net.URL;
@@ -19,6 +20,7 @@ public class login implements Initializable {
     public TextField usernameField= new TextField();
     public TextField passwordField = new TextField();
     public Button signButton = new Button();
+    public Pane pane;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -77,8 +79,9 @@ public class login implements Initializable {
                 }
             }
         });
-
-
+                    // how to switch the fxml file
+                    // Pane switchPane = FXMLLoader.load(getClass().getResource("homepage.fxml"));
+                    //pane.getChildren().setAll(switchPane);
 
     }
 }

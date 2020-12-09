@@ -111,21 +111,6 @@ public class account implements Initializable {
         tableview.setItems(sortedData);
 
 
-        filterComboBox.setItems(FXCollections.observableArrayList("Doctor","Nurse"));
-        FilteredList<Employee> filteredData2 = new FilteredList<>(dataList);
-        filterComboBox.valueProperty().addListener(new ChangeListener<String>(){
-
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue){
-                filteredData2.setPredicate(newValue == null ? null : ( Employee e) -> newValue.equals(e.getAccType()));
-            }
-
-        });
-        SortedList<Employee>  sortedData2 = new SortedList<>(filteredData2);
-        tableview.setItems(sortedData2);
-
-
-
     }
 
 

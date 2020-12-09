@@ -10,6 +10,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Menu;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ import java.util.ResourceBundle;
 public class patientProfile implements Initializable {
 
     @FXML
-    private Pane pane;
+    private AnchorPane anchorPane;
 
     @FXML
     private TextField lastnamefield;
@@ -98,12 +99,22 @@ public class patientProfile implements Initializable {
     private Button prescriptionButton;
 
     @FXML
-    void handledeleteEvent(ActionEvent event) throws IOException {
+    private Button backButton;
 
+    @FXML
+    void handledeleteEvent(ActionEvent event) throws IOException {
 
         //After deleting the patient it goes back to the homepage
             Pane homepage =  FXMLLoader.load(getClass().getResource("homepage.fxml"));
-        pane.getChildren().setAll(homepage);
+        anchorPane.getChildren().setAll(homepage);
+    }
+
+    @FXML
+    void handleBackEvent(ActionEvent event) throws IOException {
+
+        Pane page =  FXMLLoader.load(getClass().getResource("homepage.fxml"));
+        anchorPane.getChildren().setAll(page);
+
     }
 
     @FXML
@@ -112,8 +123,9 @@ public class patientProfile implements Initializable {
     }
 
     @FXML
-    void handlewriteEvent(ActionEvent event) {
-
+    void handlewriteEvent(ActionEvent event) throws IOException {
+        Pane homepage =  FXMLLoader.load(getClass().getResource("prescriptionInfo.fxml"));
+        anchorPane.getChildren().setAll(homepage);
     }
 
     @Override

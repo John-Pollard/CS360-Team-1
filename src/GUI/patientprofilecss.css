@@ -18,3 +18,10 @@
 .text-area{
     -fx-border-color: black;
 }
+.choice-box{
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+.choice-box .arrow{
+    -fx-background-color: lightblue;
+}

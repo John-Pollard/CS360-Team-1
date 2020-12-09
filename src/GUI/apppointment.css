@@ -1,6 +1,7 @@
 .button{
     -fx-background-radius: 0;
     -fx-background-color: lightblue;
+    -fx-border-color: black;
 }
 .text-field{
     -fx-border-color: black;

@@ -2,10 +2,15 @@ package GUI;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -14,6 +19,21 @@ public class AccountInfo implements Initializable {
 
     @FXML
     private ListView<String> listView;
+
+    @FXML
+    private Button backButton;
+
+    @FXML
+    private AnchorPane anchorPane;
+
+
+    @FXML
+    void handleBackEvent(ActionEvent event) throws IOException {
+
+       AnchorPane pane = FXMLLoader.load(getClass().getResource("homepage.fxml"));
+        anchorPane.getChildren().setAll(pane);
+
+    }
 
 
     @Override

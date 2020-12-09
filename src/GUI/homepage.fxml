@@ -7,7 +7,7 @@
 
 <AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.homepage">
    <children>
-      <Button layoutX="261.0" layoutY="63.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleApptEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Upcoming Appts" textFill="#fcf9f9" textOverrun="CLIP">
+      <Button layoutX="362.0" layoutY="225.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleApptEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Upcoming Appts" textFill="#fcf9f9" textOverrun="CLIP">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -15,7 +15,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button depthTest="DISABLE" layoutX="491.0" layoutY="63.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handlePrescriptionsEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Write Prescriptions" textAlignment="CENTER" textFill="#fcfafa">
+      <Button depthTest="DISABLE" layoutX="614.0" layoutY="225.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handlePrescriptionsEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Write Prescriptions" textAlignment="CENTER" textFill="#fcfafa">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
@@ -23,7 +23,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button layoutX="32.0" layoutY="232.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleNewPatientEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="New Patient" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="105.0" layoutY="400.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleNewPatientEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="New Patient" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -31,7 +31,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button layoutX="261.0" layoutY="232.0" minHeight="-Infinity" mnemonicParsing="false" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="New Appt" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="362.0" layoutY="400.0" minHeight="-Infinity" mnemonicParsing="false" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="New Appt" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -39,7 +39,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button layoutX="31.0" layoutY="63.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handlePatientListEvent" prefHeight="140.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Patient List" textAlignment="CENTER" textFill="#f2efef">
+      <Button layoutX="105.0" layoutY="225.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handlePatientListEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Patient List" textAlignment="CENTER" textFill="#f2efef">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -47,7 +47,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button layoutX="491.0" layoutY="232.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleAccountEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Accounts" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="614.0" layoutY="400.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#handleAccountEvent" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: lightblue;" stylesheets="@homepage.css" text="Accounts" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -55,5 +55,6 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
+      <Button fx:id="logoutButton" layoutX="105.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleLogoutEvent" text="Logout" />
    </children>
 </AnchorPane>

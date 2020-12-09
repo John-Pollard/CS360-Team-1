@@ -22,7 +22,7 @@
       <Label layoutX="441.0" layoutY="183.0" prefHeight="17.0" prefWidth="78.0" text="Instructions:" />
       <Label layoutX="476.0" layoutY="66.0" prefHeight="17.0" prefWidth="30.0" text="Date:" />
       <TextArea layoutX="140.0" layoutY="300.0" prefHeight="123.0" prefWidth="672.0" />
-      <Button layoutX="730.0" layoutY="493.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Cancel" />
+      <Button fx:id="cancelButton" layoutX="730.0" layoutY="493.0" mnemonicParsing="false" onAction="#handleCancelEvent" prefHeight="25.0" prefWidth="63.0" text="Cancel" />
       <Button fx:id="prescpriptionButton" layoutX="583.0" layoutY="493.0" mnemonicParsing="false" onAction="#handlePrescriptionEvent" prefHeight="25.0" prefWidth="119.0" text="Write Prescription" />
       <TextField layoutX="140.0" layoutY="61.0" prefHeight="27.0" prefWidth="238.0" />
       <TextField layoutX="140.0" layoutY="108.0" prefHeight="27.0" prefWidth="238.0" />

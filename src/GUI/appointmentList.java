@@ -79,9 +79,9 @@ public class appointmentList implements Initializable {
         tableview.setItems(sortedData);
 
 
-        filterComboBox.setItems(FXCollections.observableArrayList("Doctor","Nurse"));
+        apptBox.setItems(FXCollections.observableArrayList("Doctor","Nurse"));
         FilteredList<Employee> filteredData2 = new FilteredList<>(dataList);
-        filterComboBox.valueProperty().addListener(new ChangeListener<String>(){
+        apptBox.valueProperty().addListener(new ChangeListener<String>(){
 
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue){

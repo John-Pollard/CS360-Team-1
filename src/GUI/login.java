@@ -3,6 +3,7 @@ package GUI;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -41,9 +42,7 @@ public class login implements Initializable {
                 //authenticate the username and password
 
                 try{
-
-                    Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/softwareEngineeringDatabase", "root", "Glory16!");
+                    Connection conn = initializeDatabaseConnection();
 
                     ResultSet rs = null;
 
@@ -59,22 +58,25 @@ public class login implements Initializable {
                         stmt.setString(1, user);
                         stmt.setString(2, password);
                         rs = stmt.executeQuery();
-
+                        Boolean nextPage = true;
                         while(rs.next()){
-                            System.out.println(rs.getString("ID"));
+                            nextPage = false;
+//                            System.out.println(rs.getString("ID"));
                             JOptionPane.showMessageDialog(null, "Login Successful");
-                            System.exit(0);
+                            Pane switchPane = FXMLLoader.load(getClass().getResource("homepage.fxml"));
+                            pane.getChildren().setAll(switchPane);
+
                             //reroute to other page
                         }
 
-                        if(!rs.next()){
+                        if(!rs.next()&&nextPage){
                             throw new Exception();
                         }
                     }
 
                 }catch(Exception e2){
                     JOptionPane.showMessageDialog(null, "Invalid Username or Password");
-                    System.out.println("Invalid Username or Password");
+                   // System.out.println("Invalid Username or Password");
                   //  e2.printStackTrace();
                 }
             }
@@ -84,4 +86,10 @@ public class login implements Initializable {
                     //pane.getChildren().setAll(switchPane);
 
     }
+    public Connection initializeDatabaseConnection() throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/softwareEngineeringDatabase", "root", "Glory16!");
+        return conn;
+    }
+
 }

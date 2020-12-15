@@ -7,7 +7,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -17,22 +19,36 @@ import java.util.ResourceBundle;
 
 public class homepage  implements Initializable {
 
-        @FXML
+    @FXML
+    private Button logoutButton;
+
+
+    @FXML
         private AnchorPane anchorPane;
 
     @FXML
     void handlePatientListEvent(ActionEvent event) throws IOException {
 
 
-        AnchorPane pane=  FXMLLoader.load(getClass().getResource("patientProfile.fxml"));
+        AnchorPane pane =  FXMLLoader.load(getClass().getResource("patientList.fxml"));
 
+        anchorPane.getChildren().setAll(pane);
+
+
+
+    }
+
+    @FXML
+    void handleLogoutEvent(ActionEvent event) throws IOException {
+
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("login.fxml"));
         anchorPane.getChildren().setAll(pane);
 
     }
 
     @FXML
     void handleAccountEvent(ActionEvent event) throws IOException {
-        AnchorPane pane=  FXMLLoader.load(getClass().getResource("AccountInfo.fxml"));
+        Pane pane=  FXMLLoader.load(getClass().getResource("account.fxml"));
 
         anchorPane.getChildren().setAll(pane);
     }

@@ -21,17 +21,16 @@ import java.util.ResourceBundle;
 
 public class account implements Initializable {
 
-    @FXML
-    private TableView<?> tableview;
+
 
     @FXML
     private TextField filterField;
 
-    @FXML
-    private ChoiceBox<String> filterbox;
+
 
     @FXML
     private ComboBox<String> filterComboBox;
+
 
     @FXML
     private TableView<Employee> tableview;
@@ -48,7 +47,7 @@ public class account implements Initializable {
     @FXML
     private TableColumn<Employee,String> col_acc;
 
-    ObservableList< > dataList = FXCollections.observableArrayList();
+
 
     @FXML
     private Pane pane;
@@ -56,6 +55,7 @@ public class account implements Initializable {
     @FXML
     private Button returnButton;
 
+    ObservableList<Employee> dataList = FXCollections.observableArrayList();
     @FXML
     void handleReturnEvent(ActionEvent event) throws IOException {
         Pane returnPane = FXMLLoader.load(getClass().getResource("homepage.fxml"));
@@ -84,7 +84,7 @@ public class account implements Initializable {
 
 
 
-       FilteredList<Employee> filteredData = new FilteredList<>(dataList, b -> true);
+        FilteredList<Employee> filteredData = new FilteredList<>(dataList, b -> true);
         filterField.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(employee -> {
                 if (newValue == null || newValue.isEmpty()) {
@@ -106,24 +106,9 @@ public class account implements Initializable {
                     return false; // Does not match.
             });
         });
-        SortedList<> sortedData = new SortedList<>(filteredData);
+        SortedList<Employee> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(tableview.comparatorProperty());
         tableview.setItems(sortedData);
-
-     
-        filterComboBox.setItems(FXCollections.observableArrayList("Doctor","Nurse"));
-        FilteredList<> filteredData2 = new FilteredList<>(dataList);
-        filterComboBox.valueProperty().addListener(new ChangeListener<String>(){
-
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue){
-                filteredData2.setPredicate(newValue == null ? null : ( e) -> newValue.equals(e.getAccType()));
-            }
-
-        });
-        SortedList<>  sortedData2 = new SortedList<>(filteredData2);
-        tableview.setItems(sortedData2);
-
 
 
     }
@@ -137,7 +122,7 @@ public class account implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    search_user();
+        search_user();
 
 
     }

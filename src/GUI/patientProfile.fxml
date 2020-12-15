@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.patientProfile">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.patientProfile">
    <children>
-      <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="961.0" style="-fx-background-color: white;" stylesheets="@patientprofilecss.css">
+      <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@patientprofilecss.css">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1ffffb00" height="187.0" layoutX="552.0" layoutY="218.0" stroke="#00000043" strokeType="INSIDE" styleClass="patientprofile2" width="286.0" />
             <TextField fx:id="lastnamefield" layoutX="194.0" layoutY="120.0" />
@@ -72,6 +65,7 @@
             <Button fx:id="deleteButton" layoutX="781.0" layoutY="81.0" mnemonicParsing="false" onAction="#handledeleteEvent" text="Delete" />
             <Button fx:id="saveButton" layoutX="677.0" layoutY="82.0" mnemonicParsing="false" onAction="#handlesaveEvent" text="Save Changes" />
             <Button fx:id="prescriptionButton" layoutX="548.0" layoutY="82.0" mnemonicParsing="false" onAction="#handlewriteEvent" text="Write Prescription" />
+            <Button fx:id="backButton" layoutX="111.0" layoutY="82.0" mnemonicParsing="false" onAction="#handleBackEvent" text="Back" />
          </children>
       </Pane>
    </children>
